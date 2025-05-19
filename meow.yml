@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Discord Bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    #language-toggle {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #5865F2;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #5865F2;
+    }
+    a {
+      color: #5865F2;
+    }
+    footer {
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
+
+  <script>
+    // Force HTTPS if not already using it
+    if (location.protocol !== 'https:') {
+      location.replace('https://' + location.hostname + location.pathname + location.search);
+    }
+  </script>
+</head>
+<body>
+
+  <button id="language-toggle">Switch to Russian</button>
+
+  <section id="privacy-policy-en">
+    <h1>Privacy Policy for Discord Bot</h1>
+
+    <h2>1. Data Collection and Usage</h2>
+    <p>The bot does not collect, store, or process any personal information such as usernames, emails, or IP addresses.</p>
+
+    <h2>2. Anonymous Data</h2>
+    <p>The bot may collect anonymous technical data such as server ID or user ID solely to ensure functionality and improve the service.</p>
+
+    <h2>3. Third-Party Disclosure</h2>
+    <p>No data collected during the use of the bot is shared with third parties, except as required by law.</p>
+
+    <h2>4. Liability</h2>
+    <p>Use of the bot is voluntary. The bot administrators are not responsible for any consequences arising from its use.</p>
+
+    <h2>5. Changes</h2>
+    <p>We reserve the right to change this privacy policy at any time without prior notice. The current version is always available on this page.</p>
+
+    <footer>Last updated: May 19, 2025</footer>
+  </section>
+
+  <section id="privacy-policy-ru" style="display: none;">
+    <h1>Политика конфиденциальности Discord-бота</h1>
+
+    <h2>1. Сбор и использование данных</h2>
+    <p>Бот не собирает, не хранит и не обрабатывает персональные данные, такие как имя пользователя, электронная почта или IP-адрес.</p>
+
+    <h2>2. Анонимные данные</h2>
+    <p>Бот может собирать обезличенные технические данные, такие как ID сервера и ID пользователя, исключительно для корректной работы и улучшения функциональности.</p>
+
+    <h2>3. Передача третьим лицам</h2>
+    <p>Никакие данные, полученные при использовании бота, не передаются третьим лицам, за исключением случаев, предусмотренных законом.</p>
+
+    <h2>4. Ответственность</h2>
+    <p>Использование бота является добровольным. Администрация не несёт ответственности за последствия использования бота.</p>
+
+    <h2>5. Изменения</h2>
+    <p>Мы оставляем за собой право изменять данную политику без предварительного уведомления. Актуальная версия всегда доступна на этой странице.</p>
+
+    <footer>Дата обновления: 19 мая 2025 года</footer>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('language-toggle');
+    const enSection = document.getElementById('privacy-policy-en');
+    const ruSection = document.getElementById('privacy-policy-ru');
+
+    toggleBtn.addEventListener('click', () => {
+      const isEnglish = enSection.style.display !== 'none';
+      enSection.style.display = isEnglish ? 'none' : 'block';
+      ruSection.style.display = isEnglish ? 'block' : 'none';
+      toggleBtn.textContent = isEnglish ? 'Switch to English' : 'Switch to Russian';
+    });
+  </script>
+
+</body>
+</html>
